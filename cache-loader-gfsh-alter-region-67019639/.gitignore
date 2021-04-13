@@ -1,0 +1,5 @@
+build/
+.idea/
+server*/
+locator*/
+gfsh-*.log

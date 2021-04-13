@@ -1,0 +1,24 @@
+plugins {
+	id "java"
+}
+
+java {
+	sourceCompatibility = JavaVersion.VERSION_1_8
+}
+
+jar {
+	archiveBaseName = 'cache-loader'
+}
+
+repositories {
+	jcenter()
+	mavenCentral()
+	maven { url "https://repo.spring.io/release" }
+	maven { url "https://repo.spring.io/snapshot" }
+	maven { url "https://repo.spring.io/milestone" }
+	maven { url "https://maven.apachegeode-ci.info/snapshots/" }
+}
+
+dependencies {
+	implementation group: 'org.apache.geode', name: 'geode-core', version: '1.13.2'
+}
