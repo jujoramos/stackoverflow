@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '2.5.1'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+}
+
+version '1.0.0'
+group 'org.apache.geode.test'
+sourceCompatibility = '11'
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    set('geodeVersion', "1.13.2")
+    set('springGeodeVersion', "1.5.1")
+}
+
+dependencies {
+    implementation "org.apache.geode:geode-pulse:${geodeVersion}"
+    implementation "org.apache.geode:geode-http-service:${geodeVersion}"
+    implementation "org.springframework.boot:spring-boot-starter-jetty"
+    implementation 'org.springframework.geode:spring-geode-starter'
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.geode:spring-geode-bom:${springGeodeVersion}"
+    }
+}
+
+test {
+    useJUnitPlatform()
+}

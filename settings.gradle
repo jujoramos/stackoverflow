@@ -7,3 +7,4 @@ pluginManagement {
 
 rootProject.name = 'stackoverflow'
 include 'cache-loader-gfsh-alter-region-67019639'
+include 'sbdg-embedded-pulse-68026350'
