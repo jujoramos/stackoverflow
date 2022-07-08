@@ -8,3 +8,4 @@ pluginManagement {
 rootProject.name = 'stackoverflow'
 include 'cache-loader-gfsh-alter-region-67019639'
 include 'sbdg-embedded-pulse-68026350'
+include 'spring-and-geode-logging-integration-issue-117'
